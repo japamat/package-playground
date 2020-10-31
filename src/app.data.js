@@ -19,4 +19,8 @@ export const packageList = [
     "name": "jQuery",
     "variable": "$"
   },
+  {
+    "name": "expect",
+    "variable": "expect"
+  },
 ]
