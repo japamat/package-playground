@@ -24,21 +24,25 @@ function App() {
   })
 
   return (
-    <div class="centered-div">
+    <div className="centered-div">
       <h3>Welcome to package-playground</h3>
       <p>you can play around with the following libraries right in the dev console</p>
       <table>
 
         <thead>
-          <th>package</th>
-          <th>variable name</th>
-        </thead>
-        { packageList.map(pkg => (
           <tr>
-            <td>{pkg.name}</td>
-            <td>{pkg.variable}</td>
+            <th>package</th>
+            <th>variable name</th>
           </tr>
-        ))}
+        </thead>
+        <tbody>
+          { packageList.map(pkg => (
+            <tr key={pkg.name}>
+              <td>{pkg.name}</td>
+              <td>{pkg.variable}</td>
+            </tr>
+          ))}
+        </tbody>
       </table>
     </div>
   );
