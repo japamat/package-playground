@@ -20,11 +20,20 @@ td {
   margin: 0px 1rem;
 }
 
-.tr-line {
-  border-bottom: 2px solid black;
+.tr-line:hover {
+  cursor: pointer;
+}
+
+.home-btn:hover {
+  cursor: pointer;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+  text-align: left;
+}
+
+.code-block {
+  display: grid;
 }
