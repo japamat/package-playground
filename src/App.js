@@ -5,6 +5,13 @@ import axios from 'axios';
 import cheerio from 'cheerio';
 import { packageList } from './app.data';
 
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : {default: obj};
+}
+
+const expectObj = _interopRequireDefault(require('expect'));
+const expect = expectObj.default;
+
 const proxy = `https://cors-anywhere.herokuapp.com`;
 
 function App() {
@@ -20,7 +27,8 @@ function App() {
       }), err => {
         return Promise.reject(err)
       });
-    }
+    };
+    if (!window.expect) window.expect = expect;
   })
 
   return (
