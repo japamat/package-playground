@@ -8,9 +8,11 @@ const Ajv = props => {
 
   return (
     <div className="centered-div">
-      <p className="home-btn" onClick={() => props.changeView('home')} >home</p>
+      <p className="home-btn" onClick={() => props.changeView('home')} >{`< `}home</p>
       <h3>Ajv</h3>
       <p>Use Ajv to validate jason schemas in the console</p>
+      <a href="https://ajv.js.org/guide/getting-started.html#basic-data-validation" target="_blank">Ajv getting started</a>
+      <p>{"\n\n\n\n\n"}</p>
       <div className="block-div">
         <code>
           {`>`} const ajv = new Ajv();
@@ -51,22 +53,8 @@ const Ajv = props => {
         </code>
         <div style={{marginBottom:'1rem'}} />
         <code>
-          {`>`} const data = {`{`}foo: 1{`}`};
+          {`>`} ajv.validate(schema, data);
         </code>
-        <code>
-          {`>`} const valid = ajv.validate(schema, data);
-        </code>
-        <code>
-          {`>`} true
-        </code>
-
-
-        {/* const schema = {
-    bar: {type: "string"}
-  },
-  
-  additionalProperties: false
-} */}
         <code>
           {`>`} true
         </code>
