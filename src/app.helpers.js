@@ -4,7 +4,9 @@ import axios from 'axios';
 import cheerio from 'cheerio';
 import _ from 'lodash';
 import faker from 'faker';
+import Ajv from 'ajv';
 import Lodash from './views/Lodash';
+import AjvView from './views/Ajv';
 
 const proxy = `https://cors-anywhere.herokuapp.com`;
 
@@ -20,12 +22,16 @@ export const pickView = (view, changeView) => {
   switch(view) {
     case 'lodash':
       return <Lodash changeView={changeView} />;
+    case 'Ajv':
+      return <AjvView changeView={changeView} />;
     default:
       return <Home changeView={changeView} />;
   };
 };
 
 export const addPackagesToWindow = () => {
+  
+  if (!window.Ajv) window.Ajv = Ajv;
   if (!window._) window._ = _;
   if (!window.faker) window.faker = faker;
   if (!window.cheerio) window.cheerio = cheerio;

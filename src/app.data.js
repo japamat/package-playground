@@ -23,4 +23,8 @@ export const packageList = [
     "name": "expect",
     "variable": "expect"
   },
+  {
+    "name": "Ajv",
+    "variable": "Ajv"
+  },
 ]

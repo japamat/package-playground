@@ -12,6 +12,12 @@ td {
   text-align: center;
 }
 
+.block-div {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 0px 1rem;
+}
+
 .centered-div {
   display: flex;
   flex-direction: column;
